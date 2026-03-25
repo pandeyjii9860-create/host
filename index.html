@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewaki Construction Company - Civil Engineering Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css" />
+    <script src="script2.js"></script>
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4a574;
+            --secondary-color: #1a1a1a;
+            --accent-color: #c67c4e;
+            --light-bg: #f5f5f5;
+            --text-color: #333;
+            --border-radius: 8px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* ==================== PAGE SECTIONS ==================== */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideshow 12s infinite;
+        }
+
+        .slide:nth-child(1) { animation-delay: 0s; }
+        .slide:nth-child(2) { animation-delay: 3s; }
+        .slide:nth-child(3) { animation-delay: 6s; }
+        .slide:nth-child(4) { animation-delay: 9s; }
+
+        @keyframes slideshow {
+            0% { opacity: 0; }
+            16.66% { opacity: 1; }
+            33.32% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(198, 124, 78, 0.6);
+        }
+
+        /* ==================== QUICK INFO ==================== */
+        .quick-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ==================== PAGE BANNER ==================== */
+        .page-banner {
+            position: relative;
+            height: 30vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            color: white;
+        }
+
+        .contact-banner {
+            height: 20vh;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .banner-title {
+            position: relative;
+            z-index: 2;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ==================== ABOUT PAGE ==================== */
+        .about-content {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .company-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .company-info p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .company-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat h3 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat p {
+            color: #666;
+        }
+
+        /* ==================== TEAM SECTION ==================== */
+        .team-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .team-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-image {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.05);
+        }
+
+        .team-member h3 {
+            padding: 1.5rem 1.5rem 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .position {
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 0 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .bio {
+            padding: 1rem 1.5rem;
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ==================== SERVICES SECTION ==================== */
+        .services-section {
+            padding: 4rem 2rem;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #666;
+        }
+
+        .service-features i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        /* ==================== PROJECTS SECTION ==================== */
+        .projects-section {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: white;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* ==================== CONTACT SECTION ==================== */
+        .contact-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            min-width: 30px;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .social-section {
+            margin-top: 2rem;
+        }
+
+        .social-section h4 {
+            margin-bottom: 1rem;
+        }
+
+        .social-media-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* ==================== CONTACT FORM ==================== */
+        .contact-form-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(198, 124, 78, 0.6);
+        }
+
+        /* ==================== MAP SECTION ==================== */
+        .map-section {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .map-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .map-section iframe {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background-color: rgba(26, 26, 26, 0.98);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(10px, 10px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .gallery-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .company-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0.8rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .logo i {
+                font-size: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .banner-title {
+                font-size: 1.5rem;
+            }
+
+            .services-grid,
+            .gallery-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .company-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+   <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo" onclick="showPage('home')">
+            <img src="dewaki 1.jpg" alt="Dewaki Construction Logo" class="logo-img">
+            <span>Dewaki Construction</span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a class="nav-link active" onclick="showPage('home')">Home</a></li>
+            <li><a class="nav-link" onclick="showPage('about')">About</a></li>
+            <li><a class="nav-link" onclick="showPage('services')">Services</a></li>
+            <li><a class="nav-link" onclick="showPage('projects')">Projects</a></li>
+            <li><a class="nav-link" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <!-- Hero Section with Rotating Background -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="slide" style="background-image: url('Afno-Ghar-temple-Dhangadhi.jpg')"></div>
+                <div class="slide" style="background-image: url('cover\ page.jpg')"></div>
+                <div class="slide" style="background-image: url('dewaki\ 1.jpg')"></div>
+                <div class="slide" style="background-image: url('cover\ page\ 3.jpg')"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Dewaki Construction</h1>
+                <p class="hero-subtitle">Building Dreams with Excellence & Integrity</p>
+                <button class="cta-button" onclick="showPage('about')">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Quick Info Section -->
+        <section class="quick-info">
+            <div class="info-card">
+                <i class="fas fa-users"></i>
+                <h3>Expert Team</h3>
+                <p>Experienced professionals dedicated to quality</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-hard-hat"></i>
+                <h3>Quality Work</h3>
+                <p>We deliver outstanding construction solutions</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>On Time</h3>
+                <p>Projects completed within deadlines</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-star"></i>
+                <h3>Trusted</h3>
+                <p>100+ successful projects completed</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <!-- Page Banner -->
+        <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&h=400&fit=crop')">
+            <div class="banner-overlay"></div>
+            <h1 class="banner-title">About Our Company</h1>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-content">
+            <div class="company-info">
+                <h2>About Dewaki Construction Company</h2>
+                <p>Founded in 2020, Dewaki Engineering Solutions is a leading construction and engineering firm based in Kathmandu, Nepal.
+We specialize in civil engineering, architectural design, and infrastructure development. With a focus on innovation and quality, we have delivered diverse projects, including commercial buildings, residential developments, and public infrastructure, contributing to Nepal’s growth.</p>
+                <p>Our commitment to excellence, safety, and customer satisfaction has made us a trusted partner for property owners, developers, and government institutions. We combine traditional craftsmanship with modern technology to deliver outstanding results.</p>
+                <div class="company-stats">
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>6+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Team Members</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>Our Leadership Team</h2>
+            <div class="team-grid">
+                <!-- Owner -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="rupak.jpg" alt="Owner">
+                    </div>
+                    <h3>Rupak Raj Pandey</h3>
+                    <p class="position">Founder & CEO</p>
+                    <p class="bio">With 15+ years of experience in civil engineering,Rupak Raj Pandey  founded Dewaki Construction with a vision to revolutionize the construction industry through innovation and integrity.</p>
+                </div>
+
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="Screenshot 2026-03-04 183044.png" alt="Manager">
+                    </div>
+                    <h3>Poonam pant</h3>
+                    <p class="position">Project Manager</p>
+                    <p class="bio">Poonam brings 10+ years of project management expertise, ensuring every project is completed on time and within budget while maintaining highest quality standards.</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="dewaki staff 3.jpeg" alt="Engineer">
+                    </div>
+                    <h3>Vikram Singh</h3>
+                    <p class="position">Chief Civil Engineer</p>
+                    <p class="bio">Vikram is a certified structural engineer with expertise in modern construction techniques and sustainable building practices for all types of structures.</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Supervisor">
+                    </div>
+                    <h3>Ajay Patel</h3>
+                    <p class="position">Site Supervisor</p>
+                    <p class="bio">Ajay oversees all on-site operations with strict adherence to safety protocols and quality standards. His attention to detail ensures flawless execution.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SERVICES PAGE -->
+    <div id="services" class="page">
+        <!-- Page Banner -->
+        <section class="page-banner" style="background-image: url('cover\ page\ 4.jpg')">
+            <div class="banner-overlay"></div>
+            <h1 class="banner-title">Our Services</h1>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <h2>Civil Engineering & Construction Services</h2>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gopuram"></i>
+                    </div>
+                    <h3>Residential Construction</h3>
+                    <p>We specialize in building modern residential complexes, individual homes, and housing societies with world-class amenities and sustainable designs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Apartment buildings</li>
+                        <li><i class="fas fa-check"></i> Independent homes</li>
+                        <li><i class="fas fa-check"></i> Housing societies</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Construction</h3>
+                    <p>From office spaces to retail complexes, we deliver high-quality commercial projects designed for functionality and aesthetic appeal.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Office buildings</li>
+                        <li><i class="fas fa-check"></i> Shopping malls</li>
+                        <li><i class="fas fa-check"></i> Retail spaces</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Infrastructure Development</h3>
+                    <p>We undertake large-scale infrastructure projects including roads, bridges, and public utilities with highest engineering standards.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Road construction</li>
+                        <li><i class="fas fa-check"></i> Bridge engineering</li>
+                        <li><i class="fas fa-check"></i> Drainage systems</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Structural Design</h3>
+                    <p>Our team of experts provides comprehensive structural design and engineering solutions for all types of buildings and structures.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Load calculations</li>
+                        <li><i class="fas fa-check"></i> Blueprint design</li>
+                        <li><i class="fas fa-check"></i> 3D modeling</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Renovation & Restoration</h3>
+                    <p>Expert renovation services to revitalize existing structures while preserving their architectural integrity and historical value.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Structural repairs</li>
+                        <li><i class="fas fa-check"></i> Modernization</li>
+                        <li><i class="fas fa-check"></i> Heritage conservation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>Full-spectrum project management services ensuring timely completion, quality assurance, and cost optimization for all projects.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Planning & scheduling</li>
+                        <li><i class="fas fa-check"></i> Budget management</li>
+                        <li><i class="fas fa-check"></i> Quality control</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PROJECTS PAGE -->
+    <div id="projects" class="page">
+        <!-- Page Banner -->
+        <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&h=400&fit=crop')">
+            <div class="banner-overlay"></div>
+            <h1 class="banner-title">Our Projects</h1>
+        </section>
+
+        <!-- Projects Gallery -->
+        <section class="projects-section">
+            <h2>Our Portfolio</h2>
+            <div class="gallery-grid">
+                <!-- Project 1 -->
+                <div class="gallery-item">
+                    <img src="dewaki 1.jpg" alt="Project 1">
+                    <div class="gallery-overlay">
+                        <h3>Residential Complex - Downtown</h3>
+                        <p>500+ unit residential complex with modern amenities and sustainable features. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="gallery-item">
+                    <img src="dewaki 2.jpg" alt="Project 2">
+                    <div class="gallery-overlay">
+                        <h3>Commercial Plaza - Midtown</h3>
+                        <p>Multi-storey commercial building with premium office and retail spaces. Completed in 2023.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="gallery-item">
+                    <img src="dewaki 3.jpg" alt="Project 3">
+                    <div class="gallery-overlay">
+                        <h3>Infrastructure Bridge Project</h3>
+                        <p>2.5 KM bridge construction connecting two major cities. Completed in 2023.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="gallery-item">
+                    <img src="dewaki 4.jpg" alt="Project 4">
+                    <div class="gallery-overlay">
+                        <h3>Hospital Construction</h3>
+                        <p>State-of-the-art medical facility with advanced infrastructure. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="gallery-item">
+                    <img src="dewaki 5.jpg" alt="Project 5">
+                    <div class="gallery-overlay">
+                        <h3>School Building Project</h3>
+                        <p>Educational campus with 25 classrooms and modern learning facilities. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="gallery-item">
+                    <img src="dewaki 6.jpg" alt="Project 6">
+                    <div class="gallery-overlay">
+                        <h3>Shopping Mall - Grand Opening</h3>
+                        <p>200,000 Sq.ft shopping complex with 150+ retail outlets. Completed in 2023.</p>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="gallery-item">
+                    <img src="dewaki 15.jpg" alt="Project 7">
+                    <div class="gallery-overlay">
+                        <h3>Road Expansion Project</h3>
+                        <p>50 KM highway expansion with 6-lane infrastructure. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="gallery-item">
+                    <img src="dewaki 8.jpg " alt="Project 8">
+                    <div class="gallery-overlay">
+                        <h3>Metro Station Complex</h3>
+                        <p>Underground metro station with commercial space. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="gallery-item">
+                    <img src="dewaki 9.jpg" alt="Project 9">
+                    <div class="gallery-overlay">
+                        <h3>Corporate Office Tower</h3>
+                        <p>25-storey office tower with LEED certification. Completed in 2023.</p>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="gallery-item">
+                    <img src="dewaki 10.jpg" alt="Project 10">
+                    <div class="gallery-overlay">
+                        <h3>Water Treatment Plant</h3>
+                        <p>Infrastructure project for water treatment and distribution. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="gallery-item">
+                    <img src="dewaki 11.jpg" alt="Project 11">
+                    <div class="gallery-overlay">
+                        <h3>Sports Complex</h3>
+                        <p>Multi-sport facility with Olympic standard infrastructure. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="gallery-item">
+                    <img src="dewaki 12.jpg" alt="Project 12">
+                    <div class="gallery-overlay">
+                        <h3>Hotel & Resort</h3>
+                        <p>5-star hotel with 300+ rooms and conference facilities. Completed in 2023.</p>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="gallery-item">
+                    <img src="dewaki 13.jpg" alt="Project 13">
+                    <div class="gallery-overlay">
+                        <h3>Residential Gated Community</h3>
+                        <p>Premium gated community with 100+ villas and amenities. Completed in 2024.</p>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="gallery-item">
+                    <img src="Afno-Ghar-temple-Dhangadhi.jpg" alt="Project 14">
+                    <div class="gallery-overlay">
+                        <h3>Airport Terminal Renovation</h3>
+                        <p>Major renovation and expansion of airport terminal building. Completed in 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <!-- Page Banner -->
+        <section class="page-banner contact-banner" style="background-image: url('Afno-Ghar-temple-Dhangadhi.jpg')">
+            <div class="banner-overlay"></div>
+            <h1 class="banner-title">Contact Us</h1>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get In Touch With Us</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Office Location</h4>
+                                <p>kathmandu<br> Lalitpur District<br>HariharBhawan</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p> +977 9851364808<br>+977 9869562903</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>dewakiengineering@gmail.com<br>dewakiengineering@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-section">
+                        <h4>Follow Us On</h4>
+                        <div class="social-media-icons">
+                            <a href="https://www.facebook.com/share/1KJnbzTiXw/" class="social-icon" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/rupakthegr8?igsh=eHhrbzJsMzJ4M3c0" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/9779851364808" class="social-icon" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h3>Send us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <h2>Find Us On Map</h2>
+            <iframe src="https://www.google.com/maps?q=117+Harihar+Bhawan+Marg,+Lalitpur+44600&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Dewaki Construction Company is a leading civil engineering firm dedicated to delivering excellence in every project.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('about')">About</a></li>
+                    <li><a onclick="showPage('services')">Services</a></li>
+                    <li><a onclick="showPage('projects')">Projects</a></li>
+                    <li><a onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1KJnbzTiXw/" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rupakthegr8?igsh=eHhrbzJsMzJ4M3c0" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/9779851364808" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dewaki Construction Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+
+            // Update active nav link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Close mobile menu
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.getElementById('hamburger');
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.getElementById('hamburger');
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Scroll effect for navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+            } else {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
