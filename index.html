@@ -1244,24 +1244,11 @@ We specialize in civil engineering, architectural design, and infrastructure dev
                 <!-- Contact Form -->
                 <div class="contact-form-section">
                     <h3>Send us a Message</h3>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Your Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                   <form action="https://formspree.io/f/{form_id}" method="post">
+  <label for="email">Your Email</label>
+  <input name="Email" id="email" type="email">
+  <button type="submit">Submit</button>
+</form>
                 </div>
             </div>
         </section>
